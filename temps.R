@@ -60,6 +60,13 @@ temps = temps[-c(2,4,7)]
  filter <- !(temps < 0 | temps > 60)
  temps[filter]
  
+ #creating a file with no outliners
+ no_outliers <- temps[!(temps < 0 | temps > 60)]
+ outliers <- temps[(temps < 0 | temps > 60)]
+ 
+ # saving them to their own files
+ save(no_outliers, file ="no_ouliers.RData")
+ save(outliers, file ="ouliers.RData")
  
  
  
