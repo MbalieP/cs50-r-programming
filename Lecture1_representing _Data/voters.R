@@ -1,19 +1,29 @@
-url <- "https://github.com/fivethirtyeight/data/raw/master/non-voters/nonvoters_data.csv"
-voters <- read.csv(url)
-View(voters)
+load("temps.RData")
+View(temps)
 
-nrow(voters)
-ncol(voters)
+mean(temps)
+
+temps[2]
+temps[4]
+temps[7]
+
+temps # show me the whole data
+temps[c(2,4,7)] #show them to me
+temps[-c(2,4,7)] # remove them
+
+# is this piece of data an out-liner or not?
+# using logical expressions(comperasssion )
+#  ==
+#  !=
+#  >
+# >=
+# <
+# <=
+# TRUE T Yes
+# FALSE F NO
 
 
-unique(voters$voter_category)
-unique(voters$Q22)
-unique(voters$Q21)
-
-factor(voters$Q21)
-
-factor(
-  voters$Q21,
-  labels = c("?","Yes","No","Unsure/Undecided")
-  exclude = (-1)
-)
+# CHECKING 1 BY ON
+temps[2] < 0
+# Checking the entire vector
+temps < 0
