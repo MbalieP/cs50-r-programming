@@ -1,6 +1,8 @@
-vote <- read.table(
+vote <- read.csv(
   "votes.csv", 
   sep = ",", 
   header = TRUE
   )
-View(vote)
+vote[1,2]
+vote[,2]
+vote$mail
