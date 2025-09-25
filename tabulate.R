@@ -19,3 +19,9 @@ vote$poll + votes$mail
 vote[,2] + vote[,3] 
 
 vote$total <- vote$poll + votes$mail
+
+
+write.csv(vote,"totals.csv", row.names = FALSE)
+
+
+
