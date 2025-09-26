@@ -1,11 +1,16 @@
 get_votes <- function(prompt = "Enter votes: ") {
-  votes <- suppressWarnings(as.integer(readline(prompt)))
-  ifelse(is.na(votes), 0, votes)
+  repeat {
+    votes <- suppressWarnings(as.integer(readline(prompt)))
+    if (!is.na(votes)) {
+      return(votes)
+    }
+  }
+  
 }
 
-mario <- get_votes(prompt = "Mario: ")
-peach <- get_votes(prompt = "Peach: ")
-bowser <- get_votes(prompt = "Bowser: ")
+for (i in c("Mario", "Peach","Bowser")){
+  votes <-get_votes(paste0(i, ":"))
+  total <- totat + votes
+}
 
-total <- sum(mario, peach, bowser)
 cat("Total votes:", total)
