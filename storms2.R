@@ -4,7 +4,8 @@ View(hurricanes)
 
 hurricanes |> 
   group_by(year) |>
-  summarize(hurricanes = n())
+  slice_max(order_by = wind) |>
+  ungroup()
 
 
 
