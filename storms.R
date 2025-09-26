@@ -19,4 +19,27 @@ dplyr::filter(
   status == "hurricane"
 )
 
+#Simplifying this: because we only have one package
+filter(
+  select(
+    storms,
+    !c(lat, long, pressure, ends_with("diameter"))
+  ),
+  status == "hurricane"
+)
+
+ 
+#Simplifying this:using pipe operator
+hurricanes <- storms |>
+  select(!c(lat, long, pressure, ends_with("diameter")))
+  filter(status == "hurricane")|>
+  arrange(dec(wind),name)
+  distinct(name,year, .keep_all = TRUE)
+  
+hurricanes |>
+  select(c(year, name, wind))
+  write.csv("hurricanes.csv", row.name = FALSE)
+  
+  
+
 
