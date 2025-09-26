@@ -41,6 +41,6 @@ filter(
   
   # Save to CSV and view results
   hurricanes |>
-    select(year, name, wind) |>
+    select(c(year, name, wind)) |>
     write.csv("hurricanes.csv", row.names = FALSE)
 
