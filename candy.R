@@ -1,22 +1,19 @@
-# Load your current data (assuming it's already loaded as 'candy')
-# If not, load it first: load("candy.Rdata")
 
-# Create the new simplified dataset
-candy_simple <- data.frame(
-  name = candy$competitorname,
-  price_percentile = candy$pricepercent * 100,  # Convert to percentile (0-100)
-  sugar_percentile = candy$sugarpercent * 100   # Convert to percentile (0-100)
-)
-
-# View the new dataset
-View(candy_simple)
-
-# Or see the first few rows
-head(candy_simple)
-
-candy_simple <- data.frame(
-  name = candy$competitorname,
-  price_percentile = candy$pricepercent,
-  sugar_percentile = candy$sugarpercent
-)
-
+ggplot(
+  candy_simple,
+  aes(x = price_percentile, y = sugar_percentile)
+) +
+  geom_jitter(
+    color = "darkorchid",
+    size = 2,
+    shape = 21,
+    fill = "orchid"
+  
+  ) +
+  labs(
+    x = "Price",
+    y = "Sugar",
+    title = "Price and Sugar"
+  ) +
+  theme_classic()
+ 
