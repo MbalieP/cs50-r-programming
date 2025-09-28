@@ -15,4 +15,7 @@ describe("greet()",{
     name <- "Carter"
     expect_equal(greet(name), "hello, Carter")
   })
+  it("can say hello to the world",{
+    expect_equal(greet(),"hello,world")
+  })
 })
