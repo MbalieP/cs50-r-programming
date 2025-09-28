@@ -26,3 +26,22 @@ test_average <- function(){
 }
 
 test_average()
+
+#TEST THAT - TEST PACKAGES
+
+test_that("`average` calculates mean",{
+  expect_equal(average(c(1,2,3)), 2)
+  expect_equal(average(c(-1,-2,-3)), -2)
+  expect_equal(average(c(-1,0,1)), -2)
+  
+})
+
+
+
+
+
+
+
+
+
+
