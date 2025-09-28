@@ -33,10 +33,23 @@ average <- function (x){
 average(c("1","2","3"))
 
 
+#FINAL FUNCTION BEING TESTED ON 
+average <- function (x){
+  if(any(is.na(x))){
+    warning("`x` Contains one or more NA values")
+    return(NA)
+  }
+  if(!is.numeric(x)){
+    stop("`x` must be a numerc vector")
+  }  
+ 
+  sum(x) / length(x)
+}
+average(c("1","2","3"))
 
 
 
-#Imprecision FLOATING - POINT IMPRECISION 
+#FLOATING - POINT IMPRECISION 
 
 
 #TOLERANCE
