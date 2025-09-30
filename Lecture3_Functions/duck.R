@@ -1,16 +1,7 @@
 
 
 
-i <- 1
-repeat {
-  cat("quack! \n")
-  i <- i + 1
-  if (i > 3) {
-    break
-  } else {
-    next
-  }
-}
+
 
 #while loop
 i <- 1
