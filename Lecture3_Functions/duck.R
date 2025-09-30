@@ -3,12 +3,6 @@
 
 
 
-#while loop
-i <- 1
-while(i != 3){
-  cat("quack\n")
-  i <-i + 1
-}
 
 
 for (i in c(1, 2, 3, 4, 5)){
