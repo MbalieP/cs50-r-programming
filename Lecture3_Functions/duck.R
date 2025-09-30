@@ -34,6 +34,19 @@ repeat {
     next             # Continue to next iteration (again, optional here)
   }
 }
+# ------------------------
+# Example 3: while loop
+# ------------------------
+
+i <- 1  # Start from 1
+
+# Loop while i is NOT equal to 3
+while (i != 3) {
+  cat("quack\n")  # Print "quack" with a newline
+  i <- i + 1       # Increment i by 1
+}
+
+# This loop will run while i = 1 and 2, then stop when i = 3
 
 
 
