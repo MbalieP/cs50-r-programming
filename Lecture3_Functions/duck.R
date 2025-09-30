@@ -57,7 +57,14 @@ for (i in c(1, 2, 3, 4, 5)) {
   cat("quack!\n")  # Print "quack!" each time
 }
 
+# ------------------------
+# Example 5: for loop using a range
+# ------------------------
 
+# Loop from 1 to 10
+for (i in 1:10) {
+  cat("quack!\n")  # Print "quack!" 10 times
+}
 
 
 
