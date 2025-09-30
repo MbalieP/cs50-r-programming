@@ -48,6 +48,14 @@ while (i != 3) {
 
 # This loop will run while i = 1 and 2, then stop when i = 3
 
+# ------------------------
+# Example 4: for loop over a vector
+# ------------------------
+
+# Loop over the values 1 to 5 using a vector
+for (i in c(1, 2, 3, 4, 5)) {
+  cat("quack!\n")  # Print "quack!" each time
+}
 
 
 
