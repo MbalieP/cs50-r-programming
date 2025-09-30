@@ -17,6 +17,23 @@ repeat {
   }
 }
 
+# ------------------------
+# Example 2: repeat loop (count up version)
+# ------------------------
+
+i <- 1  # Initialize counter variable to 1
+
+repeat {
+  cat("quack! \n")  # Print "quack!" with a newline
+  i <- i + 1         # Increase the value of i by 1
+  
+  # If i becomes greater than 3, exit the loop
+  if (i > 3) {
+    break            # Exit the loop
+  } else {
+    next             # Continue to next iteration (again, optional here)
+  }
+}
 
 
 
