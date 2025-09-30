@@ -1,4 +1,4 @@
-get_votes <- function(prompt = "Enter votes: ") {
+
   repeat {
     votes <- suppressWarnings(as.integer(readline(prompt)))
     if (!is.na(votes)) {
