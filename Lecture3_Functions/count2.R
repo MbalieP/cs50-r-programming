@@ -24,3 +24,5 @@ for (i in c("Mario", "Peach", "Bowser")) {
     total <- total + votes
 }
 
+# Print out the total number of votes
+cat("Total votes:", total)
