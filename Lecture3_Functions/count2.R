@@ -21,3 +21,6 @@ for (i in c("Mario", "Peach", "Bowser")) {
   votes <- get_votes(paste0(i, ": "))
   
   # Add the collected votes to the total
+    total <- total + votes
+}
+
