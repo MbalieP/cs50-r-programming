@@ -11,5 +11,9 @@ get_votes <- function(prompt = "Enter votes: ") {
     # If the input is not a valid number, repeat the prompt
   }
 }  
-  
+ # Initialize a variable to keep track of the total votes
+total <- 0
+
+# Loop over each character name and collect votes
+for (i in c("Mario", "Peach", "Bowser")) { 
 
