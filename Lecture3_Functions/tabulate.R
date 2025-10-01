@@ -1,7 +1,4 @@
 
-for(method in colnames(votes)){
-  total_votes[method] <-  sum(votes[, method])
-}
 
 # functional programming
 #apply(votes,MARGIN =1, FUN =sum)  rows  ==  table names, rows/cols, function
