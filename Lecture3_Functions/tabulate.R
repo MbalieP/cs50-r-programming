@@ -15,12 +15,8 @@ for(method in colnames(votes)){
 apply(votes, MARGIN = 1, FUN = sum)
 
 # Sum across columns (MARGIN = 2 means column-wise operation)
-# Each column represents a method, so this gives total votes per voting method
-apply(votes, MARGIN = 2, FUN = sum)
-
-# Work with columns (sum votes per voting method)
-votes <- read.csv("votes.csv")
-total_votes <- apply(votes, MARGIN = 2, FUN = sum)
+# Each column represents a method, so this gives
+ sum)
 
 # Sort the total votes per method in ascending order
 sort(total_votes)
