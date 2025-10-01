@@ -10,8 +10,6 @@ for(method in colnames(votes)){
 
 # At this point, total_votes contains the sum of votes per voting method
 
-# Functional programming way (more concise than loops):
-
 # Sum across rows (MARGIN = 1 means row-wise operation)
 # Each row represents a candidate, so this gives total votes per candidate
 apply(votes, MARGIN = 1, FUN = sum)
