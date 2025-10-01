@@ -16,6 +16,19 @@ for(candidate in rownames(votes)){
 votes$total <- total_votes
 
 
+# Reload the votes data
+votes <- read.csv("votes.csv")
+
+# Initialize an empty vector to store total votes for each method (column)
+total_votes <- c()
+
+# Loop through each voting method (columns of the dataframe)
+for(method in colnames(votes)){
+  # For each method, calculate the total number of votes across all candidates (rows)
+  total_votes[method] <- sum(votes[, method])
+}
+
+# At this point, total_votes contains the sum of votes per voting method
 
 
 
