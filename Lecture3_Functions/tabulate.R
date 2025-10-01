@@ -1,10 +1,4 @@
-votes <- read.csv("votes.csv")
-
-total_votes <-c()
-for(candidatw in rownames(votes)){
-  total_votes[candidate] <- c(total, sum(votes[candidate,]))
-}
-votes$total <-total_votes
+v
 
 
 #
